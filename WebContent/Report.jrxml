@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.3.1.final using JasperReports Library version 6.3.1  -->
+<!-- 2017-05-05T00:54:15 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Report" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="75f5a87a-1d00-457e-9e8e-a23e5880a806">
+	<property name="com.jaspersoft.studio.data.sql.tables" value="YnVnX3JlcG9ydCAsMTUsMTUsYjI5OThiYjQtM2Q2NC00ZDE3LTk5NzUtNDliNmE1NDQxZmQ1Ow=="/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="My Driver- MySQL"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT * FROM bug_report]]>
+	</queryString>
+	<field name="bugno" class="java.lang.Long"/>
+	<field name="bug_name" class="java.lang.String"/>
+	<field name="bug_type" class="java.lang.String"/>
+	<field name="priority" class="java.lang.String"/>
+	<field name="pname" class="java.lang.String"/>
+	<field name="status" class="java.lang.String"/>
+	<field name="bug_rectifieddate" class="java.lang.String"/>
+	<group name="bugno">
+		<groupExpression><![CDATA[$F{bugno}]]></groupExpression>
+	</group>
+	<group name="bug_name">
+		<groupExpression><![CDATA[$F{bug_name}]]></groupExpression>
+	</group>
+	<group name="bug_type">
+		<groupExpression><![CDATA[$F{bug_type}]]></groupExpression>
+	</group>
+	<group name="priority">
+		<groupExpression><![CDATA[$F{priority}]]></groupExpression>
+	</group>
+	<group name="pname">
+		<groupExpression><![CDATA[$F{pname}]]></groupExpression>
+	</group>
+	<group name="status">
+		<groupExpression><![CDATA[$F{status}]]></groupExpression>
+	</group>
+	<group name="bug_rectifieddate">
+		<groupExpression><![CDATA[$F{bug_rectifieddate}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="155" splitType="Stretch">
+			<staticText>
+				<reportElement x="80" y="116" width="400" height="38" forecolor="#E82623" uuid="66fc8b3b-1a59-48fb-9a59-d5234553ab82"/>
+				<textElement>
+					<font size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[                     List of Bugs]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="79" y="-6" width="341" height="55" forecolor="#E6092E" backcolor="#FFFFFF" uuid="81cd0b33-f4b7-4d5a-8b17-7eb61f0276b3"/>
+				<textElement>
+					<font size="24" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Bug Tracking System]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="-17" y="10" width="54" height="20" uuid="e9041a79-7fbf-4922-8cf4-f3fa8da124f1"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[BugID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="45" y="10" width="79" height="20" uuid="7e6f6236-1e83-4f3d-84e1-7e122434f305"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[BugName]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="131" y="9" width="80" height="20" uuid="a73d4514-953e-41ab-b7c0-e11878a9cd01"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[BugType]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="221" y="11" width="68" height="20" uuid="5de44d50-6132-4992-a8f9-b62005b9a69e"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Priority]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="300" y="11" width="100" height="24" uuid="4bda5dee-abb6-443d-8566-86fa9e3d4e30"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ProjectName]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="405" y="10" width="55" height="23" uuid="fc8d7054-8464-4a45-923a-f205c2421500"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Status]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="469" y="10" width="97" height="20" uuid="500e1ba0-622a-4a40-9c9f-2e90fbd34d04"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[RectifiedDate]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="28" splitType="Stretch">
+			<textField>
+				<reportElement x="-18" y="3" width="58" height="21" uuid="1a85c0b9-7924-498f-a9d2-095a803406dd"/>
+				<textFieldExpression><![CDATA[$F{bugno}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="52" y="3" width="69" height="20" uuid="9db7da18-1d50-4c68-a2d9-b3527105acc0"/>
+				<textFieldExpression><![CDATA[$F{bug_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="131" y="3" width="80" height="22" uuid="bb412591-9597-4339-93b5-d8202273bf7f"/>
+				<textFieldExpression><![CDATA[$F{bug_type}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="222" y="3" width="68" height="22" uuid="fdaebc2e-5fc4-4047-88d8-8fc562214d4e"/>
+				<textFieldExpression><![CDATA[$F{priority}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="299" y="2" width="88" height="22" uuid="55bc2ac9-0ae5-49db-8d9e-edc9503e9831"/>
+				<textFieldExpression><![CDATA[$F{pname}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="402" y="2" width="60" height="22" uuid="dd805f20-f783-49ca-86d1-0fa63d9cc360"/>
+				<textFieldExpression><![CDATA[$F{status}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="471" y="2" width="100" height="26" uuid="e53f3339-4b83-4d16-b5d5-c97ed7a2c2b6"/>
+				<textFieldExpression><![CDATA[$F{bug_rectifieddate}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
